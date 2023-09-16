@@ -20,12 +20,20 @@ const Users = [{
     email:'bethzinha@gmail.com',
     senha:'felicidade123',
     token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImJldGgiLCJpYXQiOjE1MTYyMzkwMjJ9.k2RnTEzJraufUWh8h9tT8LSnHbnBOnkjbH8gI-VxVWE'
-}]
-const getUserAuthenticated = (user) => {
+}
+];
+const getUserAuthenticated = (userAcess) => {
+    let userAuth = {};
 
+Users.map((user) => {
+    if (user.email === userAcess.email & user.senha === userAcess.password){
+        userAuth = user
+    }
+})
+return userAuth;
 }
 
 const getUsers = () =>{
-        
+        return Users;
 }
 export { getUsers, getUserAuthenticated };
