@@ -27,7 +27,6 @@ export default function Login() {
   return (
     <body>
     <div class="body">
-      <h1>Login</h1>
       <form onSubmit={handlerLogin}>
 
         <h1>Entrar</h1>
