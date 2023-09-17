@@ -25,6 +25,6 @@ export const middleware = (request) => {
     NextResponse.next();
 };
 export const config = {
-    matcher: ['/', '/pages/dashboard', '/pages/alterar', '/pages/registro', ]
+    matcher: ['/', '/pages/dashboard', '/pages/alterar', '/pages/registro']
 };
 
