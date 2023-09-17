@@ -25,9 +25,13 @@ export default function Login() {
     }
   }
   return (
-    <div>
+    <body>
+    <div class="body">
       <h1>Login</h1>
       <form onSubmit={handlerLogin}>
+
+        <h1>Entrar</h1>
+
         <input
           placeholder='E-mail'
           type="email"
@@ -40,6 +44,8 @@ export default function Login() {
         </input>
         <button>Entrar</button>
       </form>
+      <ToastContainer/>
     </div>
-  )
+    </body>
+  );
 }
