@@ -2,7 +2,7 @@
 
 const Users = [{
     nome: 'Beatiz',
-    email:' Beatriz12@gmail.com',
+    email:'Beatriz12@gmail.com',
     senha:'Biatryz127',
     token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkJlYXRyaXoiLCJpYXQiOjE1MTYyMzkwMjJ9.xfgvy99pbNG-N9ibmuGJDYWLyC8yWtS-dZBSi2KL-Og'
 },{
