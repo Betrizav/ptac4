@@ -7,7 +7,7 @@ export default async function Dashboard() {
    
     const users = getUsers()
     return (
-        <div className="container">
+        <div className="containerdash">
 
           <Suspense fallback={<p> carregando... </p>}>
             <Listar users={users}/>
