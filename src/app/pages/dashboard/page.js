@@ -11,7 +11,7 @@ export default async function Dashboard() {
 
           <Suspense fallback={<p> carregando... </p>}>
             <Listar users={users}/>
-            <button><a href="/pages/Alterar">Alterar</a></button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><a href="/pages/Alterar">Alterar</a></button>
             <button><a href="/pages/Registro">Registrar</a></button>
           </Suspense>
             
