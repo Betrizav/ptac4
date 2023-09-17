@@ -1,5 +1,5 @@
 'use client'
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
@@ -20,6 +20,7 @@ const Form = () => {
         <button>Entrar</button>
         <button><a href="/pages/dashboard">Voltar</a></button>
         </form>
+        <ToastContainer/>
         </div>
     )
 };
