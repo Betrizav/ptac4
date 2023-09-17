@@ -18,8 +18,8 @@ const Form = () => {
         <input placeholder='E-mail' type='email'></input>
         <input placeholder='Senha' type='password'></input>
 
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Entrar</button>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><a href="/pages/dashboard">Voltar</a></button>
+        <button>Entrar</button>
+        <button><a href="/pages/dashboard">Voltar</a></button>
         </form>
         <ToastContainer/>
         </div>
