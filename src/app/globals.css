@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.container{
-    margin: auto; 
+.containerdash{
+    margin-top: 40px; 
     text-align: center; 
     padding-top: 20px; 
     justify-content: center;
@@ -18,8 +18,12 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 4px;
+    margin: 3px 4px;
     transition-duration: 0.4s;
     cursor: pointer;
-    width: 100px;
 }
+
+.botaozinho:hover {
+    background-color: #FFB6C1;
+    color: #DB7093;
+  }
