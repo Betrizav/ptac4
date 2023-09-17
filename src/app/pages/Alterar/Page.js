@@ -18,8 +18,8 @@ const Form = () => {
         <input placeholder='E-mail' type='email'></input>
         <input placeholder='Senha' type='password'></input>
 
-        <button>Entrar</button>
-        <button><a href="/pages/dashboard">Voltar</a></button>
+        <button className='botaozinho'>Entrar</button>
+        <button className='botaozinho'><a href="/pages/dashboard">Voltar</a></button>
         </form>
         <ToastContainer/>
         </div>
