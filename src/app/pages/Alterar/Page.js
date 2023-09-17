@@ -9,7 +9,7 @@ const Form = () => {
         toast.success('alterado com sucesso')
     }
     return (
-        <div>
+        <div className='container'>
            <h1>Alterar dados</h1>
 
                <form onSubmit={handlerLogin}>
