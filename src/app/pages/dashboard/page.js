@@ -9,10 +9,10 @@ export default async function Dashboard() {
     return (
         <div>
 
-          <Suspense fallback={<p> carregando pagina... </p>}>
+          <Suspense fallback={<p> carregando... </p>}>
             <Listar users={users}/>
-            <button><a href="/pages/alterar">lterar</a></button>
-            <button><a href="/pages/registro">Registrar</a></button>
+            <button><a href="/pages/Alterar">Alterar</a></button>
+            <button><a href="/pages/Registro">Registrar</a></button>
           </Suspense>
             
         </div>
