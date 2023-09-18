@@ -8,11 +8,13 @@ export default async function Dashboard() {
     const users = getUsers()
     return (
         <div className="containerdash">
-
+        
           <Suspense fallback={<p> carregando... </p>}>
+            <div className="card">
             <Listar users={users}/>
             <button className="botaozinho"><a href="/pages/Alterar">Alterar</a></button>
             <button className="botaozinho"><a href="/pages/Registro">Registrar</a></button>
+            </div>
           </Suspense>
             
         </div>
