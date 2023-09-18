@@ -8,9 +8,20 @@
     padding-top: 20px; 
     justify-content: center;
     justify-items: center;
+
+}
+.card{
+position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 60px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
     background-color: #FFC0CB;
-    border-radius: 10px;
-    width: 100%;
+    background-size: 490px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .botaozinho{
     background-color:#DB7093;
