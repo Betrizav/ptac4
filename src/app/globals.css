@@ -17,7 +17,7 @@ position: relative;
     margin: 30px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    background-color: 	#FFC0CB;
+    background-color: 	#FFE4E1;
     background-size: 490px;
     display: flex;
     justify-content: center;
@@ -25,10 +25,8 @@ position: relative;
     left: 450px;
 }
 .lugar{
-    padding-top: 270px;
-    padding-left: 4px;
-    background-color: aliceblue;
     display: flex;
+    width: 100%;
 }
 .usuarios{
    left: 40px;
@@ -37,7 +35,6 @@ position: relative;
    margin-left: 70px;
    margin-bottom: 100px;
    padding-left: 80px;
-   background-color: bisque;
 }
 .botaozinho{
     background-color:#DB7093;
@@ -51,6 +48,7 @@ position: relative;
     margin: 3px 10px;
     transition-duration: 0.4s;
     cursor: pointer;
+    display: flex;
 }
 
 .botaozinho:hover {
