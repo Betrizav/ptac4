@@ -10,15 +10,15 @@ const Form = () => {
         toast.success('registrado com sucesso')
     }
    return (
-    <div className="container">
-        
+    <div className="containerdash">
+
         <h1>Novo Registro</h1>
 
         <form onSubmit={handlerLogin}>
            
-        <input placeholder='nome' type='nome'></input>
-        <input placeholder='E-mail' type='email'></input>
-        <input placeholder='Senha' type='password'></input>
+        <input placeholder='nome' type='nome' className="input"></input>
+        <input placeholder='E-mail' type='email' className="input"></input>
+        <input placeholder='Senha' type='password' className="input"></input>
 
         <button className="botaozinho"><a href="/pages/dashboard">Entrar</a></button>
         <button className="botaozinho"><a href="/pages/dashboard">Voltar</a></button>
