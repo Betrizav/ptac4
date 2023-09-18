@@ -14,12 +14,11 @@ const Form = () => {
 
                <form onSubmit={handlerLogin}>
 
-        <input placeholder='nome' type='nome'></input>
-        <input placeholder='E-mail' type='email'></input>
-        <input placeholder='Senha' type='password'></input>
+        <input placeholder='nome' type='nome' className='input'></input>
+        <input placeholder='E-mail' type='email' className='input'></input>
+        <input placeholder='Senha' type='password' className='input'></input>
 
         <button class='botaozinho'>Entrar</button>
-        <button class='botaozinho'><a href="/pages/dashboard">Voltar</a></button>
         </form>
         <ToastContainer/>
         </div>
