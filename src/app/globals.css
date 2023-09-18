@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 .containerdash{
-    margin-top: 40px; 
+    margin-top: 50px; 
     text-align: center; 
     padding-top: 20px; 
     justify-content: center;
     justify-items: center;
+    background-color: #FFC0CB;
+    border-radius: 10px;
+    width: 100%;
 }
 .botaozinho{
     background-color:#DB7093;
