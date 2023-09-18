@@ -13,16 +13,31 @@
 .card{
 position: relative;
     width: 380px;
-    height: 400px;
-    margin: 50px;
+    height: 500px;
+    margin: 30px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    background-color: #FFC0CB;
+    background-color: 	#FFC0CB;
     background-size: 490px;
     display: flex;
     justify-content: center;
     align-items: center;
     left: 450px;
+}
+.lugar{
+    padding-top: 270px;
+    padding-left: 4px;
+    background-color: aliceblue;
+    display: flex;
+}
+.usuarios{
+   left: 40px;
+   color: #DB7093;
+   font-size: 1.4em;
+   margin-left: 70px;
+   margin-bottom: 100px;
+   padding-left: 80px;
+   background-color: bisque;
 }
 .botaozinho{
     background-color:#DB7093;
@@ -33,7 +48,7 @@ position: relative;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 3px 4px;
+    margin: 3px 10px;
     transition-duration: 0.4s;
     cursor: pointer;
 }
@@ -42,3 +57,22 @@ position: relative;
     background-color: #FFB6C1;
     color: #DB7093;
   }
+.input {
+    background-color: #DB7093; 
+    flex: 1; 
+    padding: 8px; 
+    border: 1px solid #C71585; 
+    border-radius: 7px; 
+    width: 200px; 
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+}
+  
+.input::placeholder {
+    color: #C71585; 
+    font-family: Andale Mono, monospace; 
+}
+  
+.input:focus {
+    border-color: #FFB6C1; 
+    outline: none; 
+}
