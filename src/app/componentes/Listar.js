@@ -1,7 +1,7 @@
 export default async function Listar({users}){
     await new Promise((resolve) => setTimeout(resolve,3000));
     return(
-        <div>
+        <div className="usuarios">
             {users?.map((user, index) =>
             <p key={index}>{user.nome}</p>
             )}
