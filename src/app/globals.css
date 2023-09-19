@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .containerdash{
     margin-top: 20px; 
     text-align: center; 
@@ -13,28 +14,40 @@
 .card{
 position: relative;
     width: 380px;
-    height: 500px;
+    height: 480px;
     margin: 30px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: 	#FFE4E1;
     background-size: 490px;
     display: flex;
     justify-content: center;
     align-items: center;
     left: 450px;
+    flex-direction: column;
 }
-.lugar{
-    display: flex;
-    width: 100%;
+.usua{
+    color: 	#C71585;
+    font-size: 2.0rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .usuarios{
-   left: 40px;
    color: #DB7093;
-   font-size: 1.4em;
-   margin-left: 70px;
-   margin-bottom: 100px;
-   padding-left: 80px;
+   font-size: 1.4rem;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.lugar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 10px;
 }
 .botaozinho{
     background-color:#DB7093;
@@ -55,6 +68,17 @@ position: relative;
     background-color: #FFB6C1;
     color: #DB7093;
   }
+
+  .novo{
+    color: #C71585;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3.0rem;
+  }
+.altera{
+    color: #C71585;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3.0rem;
+}
 .input {
     background-color: #DB7093; 
     flex: 1; 
@@ -63,10 +87,11 @@ position: relative;
     border-radius: 7px; 
     width: 200px; 
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+    margin: 7px;
 }
   
 .input::placeholder {
-    color: #C71585; 
+    color: white; 
     font-family: Andale Mono, monospace; 
 }
   
@@ -74,3 +99,30 @@ position: relative;
     border-color: #FFB6C1; 
     outline: none; 
 }
+.lugar1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+.botaozinho1{
+    background-color:#DB7093;
+    border-radius: 7px;
+    color: white;
+    padding: 14px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    display: flex;
+}
+
+.botaozinho1:hover {
+    background-color: #FFB6C1;
+    color: #DB7093;
+  }
