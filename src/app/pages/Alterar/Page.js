@@ -19,6 +19,7 @@ const Form = () => {
         <input placeholder='Senha' type='password' className='input'></input>
         <div className="lugar1">
         <button class='botaozinho1'><a href="/pages/dashboard">Entrar</a></button>
+        <button className='botaozinho'><a href='/pages/dashboard'>Voltar</a></button>
         </div>
         </form>
         <ToastContainer/>
