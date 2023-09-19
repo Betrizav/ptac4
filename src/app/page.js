@@ -29,7 +29,7 @@ export default function Login() {
     <div class="containerdash">
       <form onSubmit={handlerLogin}>
 
-        <h1 className="novo">Entrar</h1>
+        <h1 className="novo">Login</h1>
 
         <input
           placeholder='E-mail'
@@ -41,7 +41,9 @@ export default function Login() {
           type='password' className="input"
           onChange={(e) => { setUser({ ...user, password: e.target.value }) }}>
         </input>
-        <button className="botaozinho1">Entrar</button>
+        <div className="lugar1">
+        <button className="botaozinho1"><a href="/pages/dashboard">Entrar</a></button>
+        </div>
       </form>
       <ToastContainer/>
     </div>
