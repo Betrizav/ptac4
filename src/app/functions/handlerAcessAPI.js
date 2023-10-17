@@ -2,7 +2,9 @@
 
 const url = "https://projetoptac-1rgp.vercel.app";
 
-const getUserAuthenticated = (userAcess) => {
+
+const getUserAuthenticated = async (user) => {
+const responseOfApi = await fetch(url + "/user/authenticate");
     let userAuth = {};
 
 Users.map((user) => {
