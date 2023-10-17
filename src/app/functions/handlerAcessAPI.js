@@ -4,12 +4,7 @@ const url = "https://projetoptac-1rgp.vercel.app";
 
 
 const getUserAuthenticated = async (user) => {
-const responseOfApi = await fetch(url + "/user/authenticate",
-    {
-        method: "POST",
-        head: { "content-type": "application/json"},
-        body: JSON.stringify(user)
-    }
+const responseOfApi = await fetch(url + "/user/authenticated",
   );
   const userAuth = await responseOfApi.json();
   return userAuth;
@@ -18,5 +13,6 @@ const responseOfApi = await fetch(url + "/user/authenticate",
 
 const getUsers = () =>{
         return Users;
+        
 }
 export { getUsers, getUserAuthenticated };
