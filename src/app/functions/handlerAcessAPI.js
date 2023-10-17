@@ -14,12 +14,6 @@ const responseOfApi = await fetch(url + "/user/authenticate",
   const userAuth = await responseOfApi.json();
   return userAuth;
 }
-Users.map((user) => {
-    if (user.email === userAcess.email & user.senha === userAcess.password){
-        userAuth = user
-    }
-})
-
 
 
 const getUsers = () =>{
