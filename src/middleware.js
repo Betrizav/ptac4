@@ -18,7 +18,7 @@ export const middleware = async (request) => {
     }
     if (isTokenValidated) {
         if (request.nextUrl.pathname === '/') {
-            return NextResponse.redirect(Users);
+            return NextResponse.redirect(urlDash);
         }
     }
 
