@@ -2,12 +2,12 @@
 import { NextResponse } from "next/server";
 import { validateToken } from "./app/functions/validateToken";
 
-export const middleware = (request) => {
+export const middleware = async (request) => {
 
     const token = request.cookies.get('token')?.value;
     const urlLogin = new URL('/', request.url);
-    const Users = new URL('/pages/dashboard', request.url);
-    const isTokenValidated = validateToken(token);
+    const urlDash = new URL('/pages/dashboard', request.url);
+    const isTokenValidated = await validateToken(token);
 
     if (!isTokenValidated || !token) {
         if (request.nextUrl.pathname === '/pages/dashboard' || 
