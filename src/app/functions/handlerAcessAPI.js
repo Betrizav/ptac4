@@ -25,16 +25,18 @@ const getUsers = async () =>{
 }
 const updateUser = async (user, id) => {
   try {
-    const responseOfApi = await fetch (url + "/user", {
-      method: 'POST',
-      headers: { 'Content-Type': 'Application/json'},
+    const responseOfApi = await fetch (url + "/user" + id , {
+      method: 'PUT',
+      headers: {
+         'Content-Type': 'Application/json'
+        },
       body: JSON.stringify(user)
     });
-    const userSave = await responseOfApi.json();
-    return userSave;
+    const userUpdate = await responseOfApi.json();
+    return userUpdate;
   }catch {
     return null;
   }
 }
 
-export { getUsers, getUserAuthenticated, postUser };
+export { getUsers, getUserAuthenticated, updateUser, };
