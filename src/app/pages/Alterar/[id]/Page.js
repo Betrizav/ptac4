@@ -29,12 +29,11 @@ export default function AlterarDashboard({params}) {
             findUser();
         }, [])
 
-    const handlerLoginAlterar = (e) => {
-        e.preventDefault();
-        try{
+    const handlerFormSubmit = async (event) => {
+        event.preventDefault();
             toast.success("usuário alterado com sucesso");
             await updateUser(user, params.id);
-            return push("Erro na alteração, tente novamente");
+            return push("/pages/dashboard");
         }
     }
 

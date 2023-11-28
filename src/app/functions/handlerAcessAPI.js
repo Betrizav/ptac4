@@ -23,14 +23,27 @@ const getUsers = async () =>{
     return userAuth;
         
 }
+const postUser = async (user) => {
+  try {
+    const responseOfApi = await fetch (url + "/user", {
+      method: 'POST',
+      headers: { 'Content-Type': 'Application/json'},
+      body: JSON.stringify(user)
+    });
+    const userSave = await responseOfApi.json();
+    return userSave;
+  }catch {
+    return null;
+  }
+}
 
 const updateUser = async (user, id) => {
   try {
-    const responseOfApi = await fetch (url + "/user" + id , {
+    const responseOfApi = await fetch (url + "/user" + id, {
       method: 'PUT',
-      headers: {
-         'Content-Type': 'Application/json'
-        },
+      headers: { 
+        'Content-Type': 'Application/json'
+      },
       body: JSON.stringify(user)
     });
     const userUpdate = await responseOfApi.json();
@@ -40,4 +53,6 @@ const updateUser = async (user, id) => {
   }
 }
 
-export { getUsers, getUserAuthenticated, updateUser };
+const 
+
+export { getUsers, getUserAuthenticated, postUser, updateUser };
