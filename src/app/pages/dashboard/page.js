@@ -14,7 +14,6 @@ export default async function Dashboard() {
               <h2 className="usua">Usuários</h2>
             <Listar users={users}/>
             <div className="lugar">
-            <button className="botaozinho"><a href="/pages/Alterar">Alterar</a></button>
             <button className="botaozinho"><a href="/pages/Registro">Registrar</a></button>
             </div>
             </div>

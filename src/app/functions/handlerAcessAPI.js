@@ -23,6 +23,7 @@ const getUsers = async () =>{
     return userAuth;
         
 }
+
 const updateUser = async (user, id) => {
   try {
     const responseOfApi = await fetch (url + "/user" + id , {
@@ -39,4 +40,4 @@ const updateUser = async (user, id) => {
   }
 }
 
-export { getUsers, getUserAuthenticated, updateUser, };
+export { getUsers, getUserAuthenticated, updateUser };

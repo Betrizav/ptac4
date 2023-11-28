@@ -1,13 +1,44 @@
 'use client'
+import handlerAcessUser from '@/app/functions/handlerAcess';
+import { updateUser } from '@/app/functions/handlerAcessAPI';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Form = () => {
+export const metadata = {
+    title: 'alterar user',
+    description:'projeto de ptac'
+}
 
-    const handlerLogin = async (e) => {
+export default function AlterarDashboard({params}) {
+
+    const [user, setUser] = useState({
+        name: '',
+        email: '',
+        password: '',
+    });
+ 
+      const { push } = useRouter();
+
+        useEffect(()) => {
+            const findUser = async () => {
+                const userfind = await getUser(params.id)
+                setUser({...user, name: userfind.name, email: userfind,email });
+            }
+            findUser();
+        }, [])
+
+    const handlerLoginAlterar = (e) => {
         e.preventDefault();
-        toast.success('alterado com sucesso')
+        try{
+            toast.success("usuário alterado com sucesso");
+            await updateUser(user, params.id);
+            return push("Erro na alteração, tente novamente");
+        }
     }
+
+
     return (
         <div className='containerdash'>
            <h1 className='altera'>Alterar dados</h1>
@@ -26,4 +57,3 @@ const Form = () => {
         </div>
     )
 };
-export default Form;

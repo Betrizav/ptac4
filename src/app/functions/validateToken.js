@@ -4,8 +4,7 @@ import { decode } from "jsonwebtoken";
 const validadeToken = async(token) => {
     const secret = "jfdghdjhggiiweoriobiazinhaaaaa"
       try{
-        const isTokenValidate = await jwtVerify( token, 
-          new TextEncoder().encode(secret));
+        const isTokenValidate = await decode( token) 
           if (isTokenValidate) {
             return true;
           }
