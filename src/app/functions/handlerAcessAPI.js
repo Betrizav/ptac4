@@ -23,7 +23,7 @@ const getUsers = async () =>{
     return userAuth;
         
 }
-const postUser = async (user) => {
+const updateUser = async (user, id) => {
   try {
     const responseOfApi = await fetch (url + "/user", {
       method: 'POST',
