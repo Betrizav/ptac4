@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default async function Listar({users}){
+export default async function users ({users}){
     await new Promise((resolve) => setTimeout(resolve,3000));
     return(
         <div className="usuarios">

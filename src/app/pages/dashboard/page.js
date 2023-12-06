@@ -1,5 +1,5 @@
 import { getUsers } from "@/app/functions/handlerAcessAPI";
-import Listar from "@/app/componentes/listar";
+import users from "@/app/componentes/users";
 import { Suspense } from "react";
 
 

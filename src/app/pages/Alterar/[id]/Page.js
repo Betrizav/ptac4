@@ -31,9 +31,13 @@ export default function AlterarDashboard({ params }) {
 
     const handlerFormSubmit = async (event) => {
         event.preventDefault();
+        try{
         toast.success("usuário alterado com sucesso");
         await updateUser(user, params.id);
         return push("/pages/dashboard");
+        } catch{
+            
+        }
     }
 
 

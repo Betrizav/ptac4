@@ -18,9 +18,15 @@ const responseOfApi = await fetch(url + "/user/authenticated",
 
 
 const getUsers = async () =>{
+  try{
     const responseOfApi = await fetch(url + "/users", {cache:"no-cache"})
-    const userAuth = await responseOfApi.json();
-    return userAuth;
+    const users = await responseOfApi.json();
+     console.log(users)
+    return users;
+  
+  } catch{
+    return null;
+  }
         
 }
 const postUser = async (user) => {
@@ -53,5 +59,18 @@ const updateUser = async (user, id) => {
   }
 }
 
+const getUser = async (id) => {
+  try{
+    const responseOfApi = await fetch(`${url}/user/${id}`, {
+      method: 'GET',
+      headers: {'Content-type': 'Application/json'},
+      
+    })
+    const user = await responseOfApi.json();
+    return user;
+  } catch{
+    return null;
+  }
+}
 
-export { getUsers, getUserAuthenticated, postUser, updateUser };
+export { getUsers, getUserAuthenticated, postUser, updateUser, getUser};
