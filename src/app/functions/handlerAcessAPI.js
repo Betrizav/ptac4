@@ -53,6 +53,5 @@ const updateUser = async (user, id) => {
   }
 }
 
-const 
 
 export { getUsers, getUserAuthenticated, postUser, updateUser };
