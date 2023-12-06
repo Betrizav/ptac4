@@ -14,6 +14,7 @@ const handlerAcessUser = async (user) => {
         localStorage.setItem('nome', userAuth.nome)
        }
     }
+    return userAuth;
 }
 export default handlerAcessUser;
 
