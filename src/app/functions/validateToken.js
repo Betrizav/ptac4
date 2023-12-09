@@ -1,7 +1,7 @@
 import { jwtVerify } from "jose";
 import { decode } from "jsonwebtoken";
 
-const validadeToken = async(token) => {
+const validateToken = async(token) => {
     const secret = "jfdghdjhggiiweoriobiazinhaaaaa"
       try{
         const isTokenValidate = await decode( token) 
@@ -13,6 +13,6 @@ const validadeToken = async(token) => {
       }
     }
   
-    export { validadeToken };
+    export { validateToken };
 
 

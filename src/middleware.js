@@ -8,10 +8,10 @@ export const middleware = async (request) => {
     const urlLogin = new URL('/', request.url);
     const urlDash = new URL('/pages/dashboard', request.url);
     const isTokenValidated = await validateToken(token);
-v'
+
     if (!isTokenValidated || !token) {
         if (request.nextUrl.pathname === '/pages/dashboard' || 
-          request.nextUrl.pathname === '/pages/alterar' || request.nextUrl.pathname === '/pages/registro'
+          request.nextUrl.pathname === '/pages/Alterar' || request.nextUrl.pathname === '/pages/Registro'
         ) {
             return NextResponse.redirect(urlLogin);
         }
@@ -25,6 +25,6 @@ v'
     NextResponse.next();
 };
 export const config = {
-    matcher: ['/', '/pages/dashboard', '/pages/alterar', '/pages/registro']
+    matcher: ['/', '/pages/dashboard', '/pages/Alterar', '/pages/Registro']
 };
 

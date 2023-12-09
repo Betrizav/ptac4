@@ -1,6 +1,6 @@
 'use server'
 
-const url = "https://projetoptac-1rgp.vercel.app";
+const url = "https://projetoptac.vercel.app";
 
 
 const getUserAuthenticated = async (user) => {
@@ -25,7 +25,7 @@ const getUsers = async () =>{
     return users;
   
   } catch{
-    return null;
+    return [];
   }
         
 }

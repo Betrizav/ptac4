@@ -1,11 +1,11 @@
 import { getUsers } from "@/app/functions/handlerAcessAPI";
-import users from "@/app/componentes/users";
+import Listar from "../../componentes/Listar"
 import { Suspense } from "react";
 
 
 export default async function Dashboard() {
    
-    const users = getUsers()
+    const users = await getUsers()
     return (
         <div className="containerdash">
         
@@ -15,6 +15,7 @@ export default async function Dashboard() {
             <Listar users={users}/>
             <div className="lugar">
             <button className="botaozinho"><a href="/pages/Registro">Registrar</a></button>
+            <button className="Alter"><a href="/pages/Alterar">Alterar</a></button>
             </div>
             </div>
           </Suspense>

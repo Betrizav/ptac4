@@ -126,3 +126,21 @@ position: relative;
     background-color: #FFB6C1;
     color: #DB7093;
   }
+.alter{
+    background-color:#DB7093;
+    border-radius: 7px;
+    color: white;
+    padding: 14px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    display: flex;
+}
+.alter:hover{
+    background-color: #FFB6C1;
+    color: #DB7093;
+}
