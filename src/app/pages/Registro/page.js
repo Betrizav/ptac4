@@ -1,61 +1,66 @@
 'use client'
-import { postUser } from '@/app/functions/handlerAcessAPI';
-import { useState } from 'react';
-import React from 'react';
+
+
+import { UpdateUser } from "@/app/functions/handlerAcessAPI";
 import { useRouter } from "next/navigation";
+import { React, Suspense, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
-export const metadata = {
-    title: 'Registro usuários',
-    description: 'Projeto'
-}
-
-export default function RegisterDashboard() {
+export default function Alter({params}) {
     const [user, setUser] = useState({
         name: '',
         email: '',
         password: ''
-    })
-    const {push} = useRouter();
+    });
+    const {push} = useRouter()
+        const enviado = () => {
+            toast.success("Dados enviados!");
+        }
 
-    const onSubmitForm = async (event) => {
-        event.preventDefault();
-        try{
-            await postUser(user);
-            await new Promisse((resolve) => {
-              toast.success("Usuário cadastrado")
-              setTimeout(resolve, 5000)
-            });
-            return push("/pages/dashboard")
-        } catch{
-            return toast.error("Erro")
-      }
-     }
+        const handlerFormSubmit = async (event) => {
+            event.preventDefault();
+            try {
+                await UpdateUser(user, params.id);
+                await new Promise((resolve) => {
+                    toast.success("Usuário alterado com sucesso!");
+                    setTimeout(resolve, 5000);
+                    enviado();
+                });
+                return push("/pages/dashboard");
+            } catch {
+                return toast.error("Erro");
+            }
+        };
+    
+    return (
+        <div>
+      
+        <div className="geral">
+           <div className='mt-20 pb-24 geral'>
+            <form method="post" className='flex flex-col ml-auto mr-auto w-1/2 bg-white p-10 gap-2 rounded-lg' onSubmit={handlerFormSubmit}>
+
+              <h1>Altere um usuário:</h1>
+
+                <input type="text"
+                 placeholder="Digite seu Nome" 
+                 name="nome"
+                  required onChange={(e) => { setUser({ ...user, name: e.target.value }) }}/>
 
 
-     <div className="login_box">
-      <h1>Register</h1>
+                <input type="email" 
+                placeholder="Digite seu E-mail" 
+                name="email" required onChange={(e) => { setUser({ ...user, email: e.target.value }) }}/>,
 
-      <form action="" onSubmit={submitForm}>
-        <div className="input_box">
 
-          <input type="text" required onChange={(event) => { setUser({ ...user, name: event.target.value })}} />
-          <label htmlFor="">nome</label>
+                <input type="password"
+                 placeholder="Digite uma senha"
+                  name="senha" required onChange={(e) => { setUser({ ...user, password: e.target.value }) }}/> 
+                  
+                <button className="botao">Enviar</button>         
+            </form></div>
+            <ToastContainer/>
         </div>
-
-        <div className="input_box">
-
-          <input type="email" required onChange={(event) => { setUser({ ...user, email: event.target.value })}}/>
-          <label htmlFor="">E-mail</label>
         </div>
-
-        <div className="input_box">
-
-          <input type="password" name="pass" id="" required onChange={(event) => { setUser({ ...user, password: event.target.value })}} />
-          <label htmlFor="">Senha</label>
-        </div>
-
-        <input type="submit" value="Cadastrar" />
-
- };
+    );
+};

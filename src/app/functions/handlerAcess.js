@@ -4,17 +4,17 @@ import { getUserAuthenticated } from "./handlerAcessAPI";
 
 const handlerAcessUser = async (user) => {
 
-    const userAuth = await getUserAuthenticated(user);
+    const {token, nomeUsuario} = await getUserAuthenticated(user);
     
-    const isTokenValidate = await validateToken(userAuth.token);
+    const isTokenValidate = await validateToken(token);
 
     if (isTokenValidate) {
-        Cookies.set('token', userAuth.token, { expires: 1 });
-       if (typeof window !== 'undefined'){
-        localStorage.setItem('nome', userAuth.nome)
-       }
+        Cookies.set('token', token, { expires: 1 });
+        localStorage.setItem('nomeUsuario', nomeUsuario);
     }
-    return userAuth;
+    return {token, nomeUsuario};
 }
 export default handlerAcessUser;
+
+
 

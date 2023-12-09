@@ -42,9 +42,21 @@ export default function Alter({params}) {
 
               <h1>Altere um usuário:</h1>
 
-                <input type="text" placeholder="Digite seu Nome" name="nome" required onChange={(e) => { setUser({ ...user, name: e.target.value }) }}/>
-                <input type="email" placeholder="Digite seu E-mail" name="email" required onChange={(e) => { setUser({ ...user, email: e.target.value }) }}/>
-                <input type="password" placeholder="Digite uma senha" name="senha" required onChange={(e) => { setUser({ ...user, password: e.target.value }) }}/> 
+                <input type="text"
+                 placeholder="Digite seu Nome" 
+                 name="nome"
+                  required onChange={(e) => { setUser({ ...user, name: e.target.value }) }}/>
+
+
+                <input type="email" 
+                placeholder="Digite seu E-mail" 
+                name="email" required onChange={(e) => { setUser({ ...user, email: e.target.value }) }}/>,
+
+
+                <input type="password"
+                 placeholder="Digite uma senha"
+                  name="senha" required onChange={(e) => { setUser({ ...user, password: e.target.value }) }}/> 
+                  
                 <button className="botao">Enviar</button>         
             </form></div>
             <ToastContainer/>
