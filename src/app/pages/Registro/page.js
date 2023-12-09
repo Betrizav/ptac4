@@ -16,7 +16,7 @@ export default function RegisterDashboard() {
         name: '',
         email: '',
         password: ''
-    });
+    })
     const {push} = useRouter();
 
     const onSubmitForm = async (event) => {
@@ -31,7 +31,7 @@ export default function RegisterDashboard() {
         } catch{
             return toast.error("Erro")
       }
-     };
+     }
 
 
      <div className="login_box">
@@ -58,4 +58,4 @@ export default function RegisterDashboard() {
 
         <input type="submit" value="Cadastrar" />
 
-};
+ };
