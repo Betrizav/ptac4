@@ -1,9 +1,9 @@
 'use client'
 
-import Fallback from "@/app/componentes/fallback";
+import { getUser } from "@/app/functions/handlerAcessAPI";
 import { UpdateUser } from "@/app/functions/handlerAcessAPI";
 import { useRouter } from "next/navigation";
-import { React, Suspense, useState } from "react";
+import { React, useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -14,9 +14,14 @@ export default function Alter({params}) {
         password: ''
     });
     const {push} = useRouter()
-        const enviado = () => {
-            toast.success("Dados enviados!");
-        }
+    
+    useEffect(() => {
+         const findUser = async () => {
+            const userfind = await getUser(params.id);
+            setUser({...user, name: userfind.name, email: userfind.email})
+          }
+          findUser();
+    },[])
 
         const handlerFormSubmit = async (event) => {
             event.preventDefault();
@@ -35,33 +40,33 @@ export default function Alter({params}) {
     
     return (
         <div>
-            <Suspense fallback={<Fallback />}>
+       
         <div className="geral">
-           <div className='mt-20 pb-24 geral'>
+           <div className='lugar1'>
             <form method="post" className='' onSubmit={handlerFormSubmit}>
 
-              <h1>Altere um usuário:</h1>
+              <h1>Altere um usuário</h1>
 
                 <input type="text"
                  placeholder="Digite seu Nome" 
-                 name="nome"
+                 name="nome" className="input"
                   required onChange={(e) => { setUser({ ...user, name: e.target.value }) }}/>
 
 
                 <input type="email" 
-                placeholder="Digite seu E-mail" 
-                name="email" required onChange={(e) => { setUser({ ...user, email: e.target.value }) }}/>,
+                placeholder="Digite seu E-mail" className="input"
+                name="email" required onChange={(e) => { setUser({ ...user, email: e.target.value }) }}/>
 
 
                 <input type="password"
-                 placeholder="Digite uma senha"
+                 placeholder="Digite uma senha" className="input"
                   name="senha" required onChange={(e) => { setUser({ ...user, password: e.target.value }) }}/> 
                   
-                <button className="botao">Enviar</button>         
+                <button className="botaozinho">Alterar</button>         
             </form></div>
             <ToastContainer/>
         </div>
-        </Suspense>
+     
         </div>
     );
 };

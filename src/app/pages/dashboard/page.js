@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Suspense } from "react";
 import { getUsers } from "@/app/functions/handlerAcessAPI";
 
 
@@ -15,7 +14,7 @@ export default async function Dashboard() {
              <div className='card'>
                        {users?.map((user, index) => 
                         <p key={index}>
-                            <h1 className=''>Usuários</h1>
+                            <h1 className='diferente'>Usuários</h1>
                             {user.name}
                       
                             <button className="botaozinho1"><a href="/pages/Alterar/id">Alterar</a></button>
