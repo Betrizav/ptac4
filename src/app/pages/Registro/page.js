@@ -37,10 +37,10 @@ export default function Alter({params}) {
         <div>
       
         <div className="geral">
-           <div className='mt-20 pb-24 geral'>
-            <form method="post" className='flex flex-col ml-auto mr-auto w-1/2 bg-white p-10 gap-2 rounded-lg' onSubmit={handlerFormSubmit}>
+           <div className=''>
+            <form method="post" className='' onSubmit={handlerFormSubmit}>
 
-              <h1>Altere um usuário:</h1>
+              <h1>Cadastre um Usuário</h1>
 
                 <input type="text"
                  placeholder="Digite seu Nome" 

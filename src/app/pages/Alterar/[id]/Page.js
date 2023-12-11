@@ -38,7 +38,7 @@ export default function Alter({params}) {
             <Suspense fallback={<Fallback />}>
         <div className="geral">
            <div className='mt-20 pb-24 geral'>
-            <form method="post" className='flex flex-col ml-auto mr-auto w-1/2 bg-white p-10 gap-2 rounded-lg' onSubmit={handlerFormSubmit}>
+            <form method="post" className='' onSubmit={handlerFormSubmit}>
 
               <h1>Altere um usuário:</h1>
 
