@@ -17,8 +17,8 @@ export default function Alter({params}) {
     
     useEffect(() => {
          const findUser = async () => {
-            const userfind = await getUser(params.id);
-            setUser({...user, name: userfind.name, email: userfind.email})
+            const userFind = await getUser(params.id);
+            setUser({...user, name: userFind.name, email: userFind.email})
           }
           findUser();
     },[])
@@ -30,7 +30,6 @@ export default function Alter({params}) {
                 await new Promise((resolve) => {
                     toast.success("Usuário alterado com sucesso!");
                     setTimeout(resolve, 5000);
-                    enviado();
                 });
                 return push("/pages/dashboard");
             } catch {
@@ -43,13 +42,14 @@ export default function Alter({params}) {
        
         <div className="geral">
            <div className='lugar1'>
-            <form method="post" className='' onSubmit={handlerFormSubmit}>
+            <form method="put" className='' onSubmit={handlerFormSubmit}>
 
               <h1>Altere um usuário</h1>
 
                 <input type="text"
                  placeholder="Digite seu Nome" 
                  name="nome" className="input"
+
                   required onChange={(e) => { setUser({ ...user, name: e.target.value }) }}/>
 
 
