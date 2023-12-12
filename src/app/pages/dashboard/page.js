@@ -18,7 +18,7 @@ export default async function Dashboard() {
                             {user.name}
                       
                             <button className="botaozinho1"><a href="/pages/Alterar/id">Alterar</a></button>
-                        <button className="botaozinho1"><a href="/pages/registro">Cadastrar</a></button>
+                        <button className="botaozinho1"><a href="/pages/Registro">Cadastrar</a></button>
                         </p>
                         )}
                         </div>
